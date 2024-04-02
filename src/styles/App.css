@@ -8,7 +8,7 @@
 
   /* font-sizes */
   --fs-900: 9.375rem;
-  --fs-800: 3.5rem;
+  --fs-850: 6.25rem;
   --fs-750: 2rem;
 
   --fs-700: 1.75rem;
@@ -19,6 +19,8 @@
 
   --fs-section-title: 2rem;
   --fs-primary-nav: 1rem;
+  --crew-name: 3.5rem;
+  --crew-role: 2rem;
 
   /* font-families */
   --ff-bellefair: "Bellefair", serif;
@@ -133,6 +135,23 @@ ul {
   border-color: var(--clr-white);
 }
 
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -155,11 +174,12 @@ ul {
   display: flex;
   color: var(--clr-light);
   margin-inline: auto;
+  padding-inline: 2em;
 }
 
 .home {
   padding-bottom: max(6rem, 15vh);
-  gap: 22vw;
+  gap: 20vw;
   overflow: hidden;
 }
 
@@ -237,10 +257,9 @@ ul {
 /* DESTINATION PAGE */
 
 .destination {
-  justify-content: space-between;
-  padding-inline: 12vw;
-  margin-inline: auto;
-  gap: 6em;
+  padding-inline: 10vw;
+  justify-content: center;
+  gap: 5vw;
 }
 
 .section-title {
@@ -264,7 +283,8 @@ ul {
 }
 
 .destination-section-left img {
-  max-width: 700px;
+  margin-bottom: 10%;
+  max-width: 100%;
 }
 
 .destination-section-right,
@@ -282,20 +302,23 @@ ul {
   color: var(--clr-light);
 }
 
-.info-wrapper {
+.destination-info {
   display: flex;
   text-transform: uppercase;
-  gap: 2em;
+  gap: 6em;
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+  padding-top: 2.5em;
+  margin-top: 2.5em;
 }
 
-.info-wrapper h3 {
+.destination-info h3 {
   color: var(--clr-light);
   font-family: var(--ff-barlow-cond);
   font-size: 0.875rem;
-  margin-top: 5em;
+  letter-spacing: 2.35px;
 }
 
-.info-wrapper p {
+.destination-info p {
   margin-top: 0.15em;
   color: var(--clr-white);
   font-size: 1.75rem;
@@ -306,32 +329,67 @@ ul {
   padding-inline: 2em;
 }
 
-article > p {
+.small-text {
   font-size: var(--fs-500);
   font-family: var(--ff-barlow);
   color: var(--clr-light);
+  line-height: 25px;
+  max-width: 44ch;
 }
 
-article > h2 {
+.destination-details > h2 {
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: var(--fs-850);
   color: var(--clr-white);
 }
 
-/**** MEDIA QUERIES ****/
+/* CREW PAGE */
+/* .crew {
+  padding-inline: 10vw;
+  justify-content: space-evenly;
 
-@media (max-width: 1024px) {
-  .primary-nav {
-    padding-inline: min(2.7em, 15vh) 2.7em;
-  }
-
-  .container {
-    gap: 4em;
-    padding-inline: 4em;
-  }
+  gap: 5vw;
 }
 
+.crew-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+} */
+
+.crew-details :not(:last-child) {
+  text-transform: uppercase;
+  font-family: var(--ff-bellefair);
+}
+
+.crew-role {
+  font-size: var(--crew-role);
+  opacity: 50%;
+}
+
+.crew-name {
+  font-size: var(--crew-name);
+  margin-block: 0.25em;
+}
+
+.dot-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+/* .crew-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding-top: 2em;
+  padding: 0;
+}
+ */
+/**** MEDIA QUERIES ****/
+
 @media (max-width: 768px) {
+  /*NAV*/
   header {
     padding: 0;
     margin-bottom: 4em;
@@ -340,11 +398,12 @@ article > h2 {
   .logo {
     margin-left: 2.4em;
   }
-
+  /*HOME*/
   .container {
     flex-direction: column;
     height: unset;
     padding-top: 4em;
+    padding-inline: 4em;
     gap: 8em;
   }
 
@@ -368,8 +427,10 @@ article > h2 {
     justify-content: center;
   }
 
+  /*DESTINATION*/
+
   .destination {
-    padding-inline: 1em;
+    padding-inline: 0.5em;
     align-items: center;
     gap: 0em;
   }
@@ -380,41 +441,41 @@ article > h2 {
 
   .destination-section-left,
   .destination-section-right,
-  .info-wrapper {
+  .destination-info {
     text-align: center;
     justify-content: center;
     align-items: center;
   }
 
+  .destination-info {
+    padding-top: 2.5em;
+    margin-top: 2.5em;
+    gap: 2em;
+  }
+
   .destination-section-left img {
-    max-width: 300px;
+    max-width: 60%;
+    margin-block: 0;
   }
 
   .destination-section-right {
     margin-top: 2em;
   }
 
-  .info-wrapper p {
+  .destination-details p {
+    max-width: 61ch;
+  }
+  .destination-info p {
     padding-inline: 1.25em;
+  }
+
+  .section-title {
+    letter-spacing: 3.38px;
   }
 }
 
 @media (max-width: 540px) {
-  .container {
-    padding-inline: 1em;
-    gap: 4em;
-    padding-top: 0;
-  }
-
-/*   .home {
-    padding: 0;
-    margin: 0;
-  }
- */
-  .page-left > h1 {
-    letter-spacing: 2.75px;
-  }
-
+  /* NAV */
   .logo {
     margin-top: 1.5em;
     margin-left: 1.5em;
@@ -470,6 +531,17 @@ article > h2 {
     border: 0;
   }
 
+  /* HOME */
+  .container {
+    padding-inline: 1em;
+    gap: 4em;
+    padding-top: 0;
+  }
+
+  .page-left > h1 {
+    letter-spacing: 2.75px;
+  }
+
   /* DESTINATION */
   .destination-tab {
     gap: 1em;
@@ -487,23 +559,20 @@ article > h2 {
   .section-title {
     font-size: 1rem;
     margin-right: unset;
+    letter-spacing: 2.7px;
   }
 
-  .destination-section-left img {
-    max-width: 170px;
-  }
-
-  article h2 {
-    font-size: 3.5rem;
-  }
-
-  .info-wrapper {
+  .destination-info {
     flex-direction: column;
     gap: 0;
   }
 
-  .info-wrapper div:nth-child(2) h3 {
+  .destination-info div:nth-child(2) h3 {
     margin-top: 2em;
+  }
+
+  .crew-img {
+    border-bottom: solid 1px rgb(255, 255, 255, 0.1);
   }
 }
 
@@ -559,6 +628,20 @@ article > h2 {
   }
 }
 
+@media (max-width: 1024px) {
+  .primary-nav {
+    padding-inline: min(2.7em, 15vh) 2.7em;
+  }
+
+  .container {
+    gap: 2em;
+  }
+
+  .large-button {
+    padding: 0 1.25em;
+  }
+}
+
 @media (min-width: 1440px) {
   header::after {
     width: 350%;
@@ -579,22 +662,28 @@ article > h2 {
 
 @media (max-width: 768px) {
   :root {
-    --fs-500: 1rem;
+    --fs-850: 5rem;
     --fs-700: 1.25rem;
+    --fs-500: 1rem;
 
     --fs-primary-nav: 0.875rem;
     --fs-section-title: 1rem;
+    --crew-name: 2.5rem;
+    --crew-role: 1.5rem;
   }
 }
 
 @media (max-width: 540px) {
   :root {
-    --fs-500: 0.938rem;
-    --fs-700: 1rem;
-    --fs-750: 1.25rem;
     --fs-900: 6rem;
+    --fs-850: 3.5rem;
+    --fs-750: 1.25rem;
+    --fs-700: 1rem;
+    --fs-500: 0.938rem;
 
     --fs-primary-nav: 1rem;
     --fs-section-title: 1.25rem;
+    --crew-name: 1.5rem;
+    --crew-role: 1rem;
   }
 }

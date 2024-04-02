@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import data from "../data.json";
 
-
 const Destination = () => {
-
   const [selectedDestination, setSelectedDestination] = useState(
     data.destinations[0]
   );
@@ -13,7 +11,7 @@ const Destination = () => {
   };
 
   return (
-    <section className="even-columns destination">
+    <section className="destination">
       <div className="destination-section-left">
         <h1 className="section-title">
           <span aria-hidden="true">01</span>Pick Your Destination
@@ -39,13 +37,11 @@ const Destination = () => {
           ))}
         </div>
 
-        <article>
-
+        <article className="destination-details">
           <h2>{selectedDestination.name}</h2>
-          <p>{selectedDestination.description}</p>
+          <p className="small-text">{selectedDestination.description}</p>
 
-          <div className="info-wrapper">
-
+          <div className="destination-info">
             <div>
               <h3>Avg. distance</h3>
               <p>{selectedDestination.distance}</p>
@@ -55,9 +51,7 @@ const Destination = () => {
               <h3>Est. travel time</h3>
               <p>{selectedDestination.travel}</p>
             </div>
-
           </div>
-
         </article>
       </div>
     </section>
