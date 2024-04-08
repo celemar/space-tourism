@@ -32,11 +32,13 @@ const Technology = () => {
               </button>
             ))}
           </div>
+
           <article className="technology-details">
             <h2>The Terminology...</h2>
             <p className="technology-name">{selectedTechnology.name}</p>
             <p className="small-text">{selectedTechnology.description}</p>
           </article>
+          
         </div>
       </div>
       
@@ -44,7 +46,7 @@ const Technology = () => {
 
         <picture>
           <source
-            media="(min-width: 768px)"
+            media="(min-width: 769px)"
             srcSet={selectedTechnology.images.portrait}
             type="image/jpeg"
           />

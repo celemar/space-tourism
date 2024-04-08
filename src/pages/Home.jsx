@@ -1,14 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  useEffect(() => {
-    document.body.className = 'home'; // Assuming this is the class name for the Home page
-    return () => {
-      // Cleanup function to remove the class name when the component unmounts
-      document.body.className = '';
-    };
-  }, []);
   return (
     <main>
       <div className="container even-columns home">
@@ -25,7 +18,7 @@ const Home = () => {
           </p>
         </div>
         <div className="page-right">
-          <Link to="/" className="large-button">
+          <Link to="/Destination" className="large-button">
             Explore
           </Link>
         </div>

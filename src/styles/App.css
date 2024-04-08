@@ -12,7 +12,7 @@
   --fs-750: 2rem;
 
   --fs-700: 1.75rem;
-  --fs-600: 1.5rem;
+
   --fs-500: 1.125rem;
   --fs-400: 1rem;
   --fs-200: 0.875rem;
@@ -26,13 +26,6 @@
   --ff-bellefair: "Bellefair", serif;
   --ff-barlow: "Barlow", sans-serif;
   --ff-barlow-cond: "Barlow Condensed", sans-serif;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 *,
@@ -78,6 +71,13 @@ body {
 }
 
 /* HEADER */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
 header {
   display: flex;
@@ -337,6 +337,8 @@ ul {
   .logo {
     margin-top: 1.5em;
     margin-left: 1.5em;
+    width: 40px;
+    height: 40px;
   }
 
   .primary-nav {

@@ -12,7 +12,7 @@
 }
 
 .technology-container--left {
-  padding-bottom:4em;
+  padding-bottom: 4em;
 }
 
 .technology-container--left .section-title {
@@ -90,6 +90,10 @@
     padding-left: unset;
     margin: 50%;
   }
+
+  .technology-img {
+    margin-block: 7em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -140,18 +144,10 @@
   }
 
   .technology-name {
-    margin-block: 0.25em;
+    margin-block: 0.3em;
   }
 
-
-  .technology-container--right {
-    background-image: url("public\assets\technology\image-space-capsule-landscape.jpg");
-    background-size: cover;
-  }
-  
   .technology-container--right picture {
-    display: block;
-    width: 100vw;
   }
 
   .technology-img {
@@ -161,7 +157,7 @@
 
   .technology-container--left .section-title {
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 0;
     padding-left: 2em;
   }
@@ -175,14 +171,14 @@
 @media (max-width: 1024px) {
   .wrapper {
     gap: 2em;
-  } 
+  }
 }
 
 @media (max-width: 1280px) {
   .technology-container--left {
-    padding-bottom:0em;
+    padding-bottom: 0em;
   }
-  
+
   .technology-container--left .section-title {
     margin-bottom: 3em;
   }
@@ -195,10 +191,9 @@
 }
 
 .technology-container--right {
-  background-image: url("{selectedTechnology.images.portrait}");
+  background-image: url(public\assets\technology\image-space-capsule-landscape.jpg);
   background-size: cover;
   background-position: center center;
-  /* Other styles */
 }
 
 @media (max-width: 540px) {
@@ -208,15 +203,15 @@
 
   .technology-container--left .section-title {
     padding-left: unset;
+    padding-top: 0.5em;
     top: -10%;
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
     margin: 0;
   }
 
   .technology-img {
-    margin-block: unset;
+    margin-block: 1em;
   }
 
   .technology .dot-wrapper {
