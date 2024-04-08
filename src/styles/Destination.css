@@ -1,0 +1,151 @@
+.destination {
+  padding-inline: 10vw;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.destination-tab {
+  display: flex;
+  gap: 2em;
+}
+
+.destination-container--left img {
+  margin-bottom: 10%;
+  max-width: 100%;
+}
+
+.destination-container--right,
+.destination-container--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.destination-tab > button {
+  font-family: var(--ff-barlow-cond);
+  letter-spacing: 2.75px;
+  text-transform: uppercase;
+  background: none;
+  color: var(--clr-light);
+}
+
+.destination-info {
+  display: flex;
+  text-transform: uppercase;
+  gap: 6em;
+  border-top: 1px solid rgb(255, 255, 255, 0.1);
+  padding-top: 2.5em;
+  margin-top: 2.5em;
+}
+
+.destination-info h3 {
+  color: var(--clr-light);
+  font-family: var(--ff-barlow-cond);
+  font-size: 0.875rem;
+  letter-spacing: 2.35px;
+}
+
+.destination-info p {
+  margin-top: 0.15em;
+  color: var(--clr-white);
+  font-size: 1.75rem;
+}
+
+.destination-container--right,
+.destination-container--left {
+  padding-inline: 2em;
+}
+
+.destination-details > h2 {
+  text-transform: uppercase;
+  font-size: var(--fs-850);
+  color: var(--clr-white);
+}
+
+.destination-container--left picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .destination {
+    padding-inline: 0.5em;
+    align-items: center;
+    gap: 0em;
+  }
+
+  .destination-container--left,
+  .destination-container--right,
+  .destination-info {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .destination-info {
+    padding-top: 2.5em;
+    margin-top: 2.5em;
+    gap: 2em;
+  }
+
+  .destination-container--left img {
+    max-width: 70%;
+    margin-block: 0;
+  }
+
+  .destination-container--right {
+    margin-top: 2em;
+  }
+
+  .destination-details p {
+    max-width: 61ch;
+  }
+  .destination-info p {
+    padding-inline: 1.25em;
+  }
+
+
+}
+
+@media (max-width:540px) {
+   .destination-tab {
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+
+  .destination-tab.underline-indicators > * {
+    padding: 0.3em 0.5em;
+  }
+
+  .destination-tab > button {
+    font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    margin-right: unset;
+    letter-spacing: 2.7px;
+  }
+
+  .destination-info {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .destination-info div:nth-child(2) h3 {
+    margin-top: 2em;
+  }
+  
+  .destination-container--left img {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 769px) {
+  .destination {
+    display: flex;
+    height: calc(100vh - 140px);
+    padding-inline: 6em;
+  }
+}

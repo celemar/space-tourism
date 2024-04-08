@@ -12,17 +12,21 @@ const Destination = () => {
 
   return (
     <section className="destination">
-      <div className="destination-section-left">
+      <div className="destination-container--left">
         <h1 className="section-title">
           <span aria-hidden="true">01</span>Pick Your Destination
         </h1>
-        <img
-          className="destination-img"
-          src={selectedDestination.images.png}
-          alt={selectedDestination.name}
-        />
+        <picture>
+          <source srcSet={selectedDestination.images.webp} type="images/webp" />
+          <img
+            className="destination-img"
+            src={selectedDestination.images.png}
+            alt={selectedDestination.name}
+          />
+        </picture>
       </div>
-      <div className="destination-section-right">
+
+      <div className="destination-container--right">
         <div className="destination-tab underline-indicators">
           {data.destinations.map((destination) => (
             <button
@@ -36,7 +40,6 @@ const Destination = () => {
             </button>
           ))}
         </div>
-
         <article className="destination-details">
           <h2>{selectedDestination.name}</h2>
           <p className="small-text">{selectedDestination.description}</p>

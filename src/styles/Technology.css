@@ -1,0 +1,248 @@
+.technology {
+  display: flex;
+  padding-left: 10vw;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.wrapper {
+  display: flex;
+  gap: 4em;
+}
+
+.technology-container--left {
+  padding-bottom:4em;
+}
+
+.technology-container--left .section-title {
+  margin-bottom: 5em;
+}
+
+.technology-container--right {
+  margin-left: auto;
+  margin-top: 12%;
+}
+
+.technology-details .small-text {
+  max-width: 43ch;
+  line-height: 32px;
+}
+
+.technology-img {
+  height: 60vh;
+  object-fit: contain;
+}
+
+/* DOT INDICATORS */
+
+.technology .dot-indicators > * {
+  height: 80px;
+  width: 80px;
+  background-color: transparent;
+  border: solid 1px var(--clr-white);
+  color: var(--clr-white);
+}
+
+.technology .dot-indicators > *:hover,
+.technology .dot-indicators > *:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.technology .dot-indicators > [aria-selected="true"] {
+  color: #0b0d17;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.numbered-button::before {
+  content: attr(data-number) " ";
+  font-size: 2rem;
+  font-family: var(--ff-bellefair);
+}
+
+/******** ********/
+
+.technology .dot-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.technology-details > h2 {
+  text-transform: uppercase;
+  color: var(--clr-light);
+  font-size: 1rem;
+  font-family: var(--ff-barlow-cond);
+  letter-spacing: 2.7px;
+}
+
+.technology-name {
+  text-transform: uppercase;
+  font-size: var(--names);
+}
+
+@media (max-width: 540px) {
+  .technology-details > h2 {
+    letter-spacing: 2.36px;
+    font-size: 0.875rem;
+  }
+
+  .technology-container--left .section-title {
+    padding-left: unset;
+    margin: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .technology {
+    flex-direction: column-reverse;
+    padding-left: unset;
+    gap: unset;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .technology .dot-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  .technology .dot-indicators > * {
+    width: 60px;
+    height: 60px;
+    margin-top: 0;
+  }
+
+  .numbered-button::before {
+    font-size: 1.5rem;
+  }
+
+  .technology-container--left {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .technology-container--right {
+    margin-top: unset;
+  }
+
+  .technology-details {
+    text-align: center;
+  }
+
+  .technology-details > h2 {
+    margin-top: 1em;
+  }
+
+  .technology-name {
+    margin-block: 0.25em;
+  }
+
+
+  .technology-container--right {
+    background-image: url("public\assets\technology\image-space-capsule-landscape.jpg");
+    background-size: cover;
+  }
+  
+  .technology-container--right picture {
+    display: block;
+    width: 100vw;
+  }
+
+  .technology-img {
+    margin-block: 4em;
+    height: auto;
+  }
+
+  .technology-container--left .section-title {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    padding-left: 2em;
+  }
+
+  .technology-details .small-text {
+    max-width: 47ch;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    gap: 2em;
+  } 
+}
+
+@media (max-width: 1280px) {
+  .technology-container--left {
+    padding-bottom:0em;
+  }
+  
+  .technology-container--left .section-title {
+    margin-bottom: 3em;
+  }
+}
+
+:root {
+  --fs-space: 1.5rem;
+  --fs-space: 2.5rem;
+  --fs-space: 3.5rem;
+}
+
+.technology-container--right {
+  background-image: url("{selectedTechnology.images.portrait}");
+  background-size: cover;
+  background-position: center center;
+  /* Other styles */
+}
+
+@media (max-width: 540px) {
+  .technology {
+    position: relative;
+  }
+
+  .technology-container--left .section-title {
+    padding-left: unset;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 0;
+  }
+
+  .technology-img {
+    margin-block: unset;
+  }
+
+  .technology .dot-wrapper {
+    margin-top: 2.5em;
+  }
+
+  .technology .dot-indicators > * {
+    width: 40px;
+    height: 40px;
+  }
+
+  .numbered-button::before {
+    font-size: 1rem;
+  }
+
+  .technology-details > h2 {
+    margin-top: 0;
+  }
+
+  .technology-details .small-text {
+    max-width: 40ch;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .technology-container--right {
+    max-width: 550px;
+  }
+}

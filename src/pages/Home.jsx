@@ -11,7 +11,7 @@ const Home = () => {
   }, []);
   return (
     <main>
-      <div className="home container even-columns home">
+      <div className="container even-columns home">
         <div className="page-left">
           <h1>
             So, you want to travel to

@@ -19,7 +19,7 @@
 
   --fs-section-title: 2rem;
   --fs-primary-nav: 1rem;
-  --crew-name: 3.5rem;
+  --names: 3.5rem;
   --crew-role: 2rem;
 
   /* font-families */
@@ -254,14 +254,6 @@ ul {
   transform: scale(1.5);
 }
 
-/* DESTINATION PAGE */
-
-.destination {
-  padding-inline: 10vw;
-  justify-content: center;
-  gap: 5vw;
-}
-
 .section-title {
   font-size: var(--fs-section-title);
   font-family: var(--ff-barlow-cond);
@@ -277,58 +269,6 @@ ul {
   opacity: 25%;
 }
 
-.destination-tab {
-  display: flex;
-  gap: 2em;
-}
-
-.destination-section-left img {
-  margin-bottom: 10%;
-  max-width: 100%;
-}
-
-.destination-section-right,
-.destination-section-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.destination-tab > button {
-  font-family: var(--ff-barlow-cond);
-  letter-spacing: 2.75px;
-  text-transform: uppercase;
-  background: none;
-  color: var(--clr-light);
-}
-
-.destination-info {
-  display: flex;
-  text-transform: uppercase;
-  gap: 6em;
-  border-top: 1px solid rgb(255, 255, 255, 0.1);
-  padding-top: 2.5em;
-  margin-top: 2.5em;
-}
-
-.destination-info h3 {
-  color: var(--clr-light);
-  font-family: var(--ff-barlow-cond);
-  font-size: 0.875rem;
-  letter-spacing: 2.35px;
-}
-
-.destination-info p {
-  margin-top: 0.15em;
-  color: var(--clr-white);
-  font-size: 1.75rem;
-}
-
-.destination-section-right,
-.destination-section-left {
-  padding-inline: 2em;
-}
-
 .small-text {
   font-size: var(--fs-500);
   font-family: var(--ff-barlow);
@@ -337,59 +277,11 @@ ul {
   max-width: 44ch;
 }
 
-.destination-details > h2 {
-  text-transform: uppercase;
-  font-size: var(--fs-850);
-  color: var(--clr-white);
-}
-
-/* CREW PAGE */
-/* .crew {
-  padding-inline: 10vw;
-  justify-content: space-evenly;
-
-  gap: 5vw;
-}
-
-.crew-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-} */
-
-.crew-details :not(:last-child) {
-  text-transform: uppercase;
-  font-family: var(--ff-bellefair);
-}
-
-.crew-role {
-  font-size: var(--crew-role);
-  opacity: 50%;
-}
-
-.crew-name {
-  font-size: var(--crew-name);
-  margin-block: 0.25em;
-}
-
-.dot-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 2em;
-}
-
-/* .crew-img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  padding-top: 2em;
-  padding: 0;
-}
- */
 /**** MEDIA QUERIES ****/
 
 @media (max-width: 768px) {
-  /*NAV*/
+  /*** NAV ***/
+
   header {
     padding: 0;
     margin-bottom: 4em;
@@ -398,13 +290,19 @@ ul {
   .logo {
     margin-left: 2.4em;
   }
-  /*HOME*/
+
+  /*** HOME ***/
+
   .container {
     flex-direction: column;
     height: unset;
     padding-top: 4em;
-    padding-inline: 4em;
-    gap: 8em;
+    /*     padding-inline: 4em;
+    gap: 8em; */
+  }
+
+  .home {
+    padding-bottom: 4em;
   }
 
   .page-left {
@@ -419,6 +317,7 @@ ul {
   }
 
   .large-button {
+    margin-top: 2em;
     padding: 0 1.25em;
   }
 
@@ -427,55 +326,14 @@ ul {
     justify-content: center;
   }
 
-  /*DESTINATION*/
-
-  .destination {
-    padding-inline: 0.5em;
-    align-items: center;
-    gap: 0em;
-  }
-
   .section-title {
     margin-right: auto;
-  }
-
-  .destination-section-left,
-  .destination-section-right,
-  .destination-info {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .destination-info {
-    padding-top: 2.5em;
-    margin-top: 2.5em;
-    gap: 2em;
-  }
-
-  .destination-section-left img {
-    max-width: 60%;
-    margin-block: 0;
-  }
-
-  .destination-section-right {
-    margin-top: 2em;
-  }
-
-  .destination-details p {
-    max-width: 61ch;
-  }
-  .destination-info p {
-    padding-inline: 1.25em;
-  }
-
-  .section-title {
     letter-spacing: 3.38px;
   }
 }
 
 @media (max-width: 540px) {
-  /* NAV */
+  /*** NAV ***/
   .logo {
     margin-top: 1.5em;
     margin-left: 1.5em;
@@ -531,7 +389,7 @@ ul {
     border: 0;
   }
 
-  /* HOME */
+  /*** HOME ***/
   .container {
     padding-inline: 1em;
     gap: 4em;
@@ -540,39 +398,6 @@ ul {
 
   .page-left > h1 {
     letter-spacing: 2.75px;
-  }
-
-  /* DESTINATION */
-  .destination-tab {
-    gap: 1em;
-    margin-bottom: 1em;
-  }
-
-  .destination-tab.underline-indicators > * {
-    padding: 0.3em 0.5em;
-  }
-
-  .destination-tab > button {
-    font-size: 0.875rem;
-  }
-
-  .section-title {
-    font-size: 1rem;
-    margin-right: unset;
-    letter-spacing: 2.7px;
-  }
-
-  .destination-info {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .destination-info div:nth-child(2) h3 {
-    margin-top: 2em;
-  }
-
-  .crew-img {
-    border-bottom: solid 1px rgb(255, 255, 255, 0.1);
   }
 }
 
@@ -620,12 +445,6 @@ ul {
     height: calc(100vh - 140px);
     align-items: flex-end;
   }
-
-  section {
-    display: flex;
-    height: calc(100vh - 140px);
-    padding-inline: 6em;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -660,6 +479,8 @@ ul {
   }
 }
 
+/*** FONT SIZES ***/
+
 @media (max-width: 768px) {
   :root {
     --fs-850: 5rem;
@@ -667,8 +488,10 @@ ul {
     --fs-500: 1rem;
 
     --fs-primary-nav: 0.875rem;
-    --fs-section-title: 1rem;
-    --crew-name: 2.5rem;
+    --fs-section-title: 1.25rem;
+
+    --names: 2.5rem;
+
     --crew-role: 1.5rem;
   }
 }
@@ -683,7 +506,14 @@ ul {
 
     --fs-primary-nav: 1rem;
     --fs-section-title: 1.25rem;
-    --crew-name: 1.5rem;
+
+    --names: 1.5rem;
+
     --crew-role: 1rem;
   }
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
 }

@@ -9,19 +9,13 @@ const Crew = () => {
   };
 
   return (
-    <section className="crew even-columns">
-      <div className="crew-left ">
+    <section className="crew">
+
+      <div className="crew-container--left">
         <h1 className="section-title">
           <span aria-hidden="true">02</span>Meet your crew
         </h1>
-        <div>
-          {" "}
-          <img
-            className="crew-img"
-            src={selectedCrew.images.png}
-            alt={selectedCrew.name}
-          />
-        </div>
+
         <article class="crew-details">
           <h2 className="crew-role">{selectedCrew.role}</h2>
           <p className="crew-name">{selectedCrew.name}</p>
@@ -40,6 +34,18 @@ const Crew = () => {
           ))}
         </div>
       </div>
+
+      <div className="crew-container--right">
+        <picture>
+          <source srcSet={selectedCrew?.images.webp} type="image/webp" />
+          <img
+            className="crew-img"
+            src={selectedCrew?.images.png}
+            alt={selectedCrew?.name || "Crew member"}
+          />
+        </picture>
+      </div>
+
     </section>
   );
 };

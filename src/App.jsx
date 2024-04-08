@@ -1,5 +1,8 @@
 import React from "react";
 import "/src/styles/App.css";
+import "/src/styles/Destination.css";
+import "/src/styles/Crew.css";
+import "/src/styles/Technology.css";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -8,12 +11,19 @@ import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
+});
 
 function App() {
   
   return (
     <BrowserRouter>
-
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
