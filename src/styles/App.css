@@ -365,6 +365,7 @@ ul {
     width: 1.5em;
     aspect-ratio: 1;
     border: 0;
+    color: #D0D6F9;
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {

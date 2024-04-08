@@ -60,12 +60,12 @@
   font-family: var(--ff-bellefair);
 }
 
-/******** ********/
-
 .technology .dot-wrapper {
   display: inline-flex;
   flex-direction: column;
 }
+
+/******** ********/
 
 .technology-details > h2 {
   text-transform: uppercase;

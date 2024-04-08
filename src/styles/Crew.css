@@ -104,6 +104,10 @@
     flex-direction: column-reverse;
   }
 
+  .crew-img {
+    margin-top: 2em;
+  }
+
   .crew-container--left {
     flex-direction: column-reverse;
   }
