@@ -359,17 +359,16 @@ ul {
     right: 1em;
     top: 2em;
     background: transparent;
-    background-image: url(./assets/shared/icon-hamburger.svg);
+    background-image: url(/assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 1.5em;
     aspect-ratio: 1;
     border: 0;
-    color: #D0D6F9;
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(./assets/shared/icon-close.svg);
+    background-image: url(/assets/shared/icon-close.svg);
   }
 
   .mobile-nav-toggle:focus-visible {
