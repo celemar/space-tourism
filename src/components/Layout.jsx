@@ -42,13 +42,14 @@ export default function Layout({ activeLink, setActiveLink }) {
             "/assets/home/background-home"
           );
       }
+      document.body.style.backgroundImage = `url(${imageUrl})`;
+      document.body.style.backgroundSize = "cover";
       setBackgroundImage(imageUrl);
     };
 
     setDynamicBackgroundImage();
 
     window.addEventListener("resize", setDynamicBackgroundImage);
-
     return () => {
       window.removeEventListener("resize", setDynamicBackgroundImage);
     };
@@ -72,16 +73,6 @@ export default function Layout({ activeLink, setActiveLink }) {
     <>
       <Header activeLink={activeLink} setActiveLink={setActiveLink} />
       <Outlet />
-      {backgroundImage && (
-        <style>
-          {`
-                        body {
-                            background-image: url(${backgroundImage});
-                            background-size: cover;
-                        }
-                    `}
-        </style>
-      )}
     </>
   );
 }
