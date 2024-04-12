@@ -232,3 +232,9 @@
     max-width: 550px;
   }
 }
+
+@media (min-width: 1536px) {
+  .technology-container--left {
+    margin-left: 4vw;
+  }
+}

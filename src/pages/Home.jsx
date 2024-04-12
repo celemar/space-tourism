@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = () => {
-  
+const Home = ({ setActiveLink }) => {
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
   return (
     <main>
       <div className="container even-columns home">
@@ -19,7 +21,12 @@ const Home = () => {
           </p>
         </div>
         <div className="page-right">
-          <Link to="/" className="large-button">
+          <Link
+            to="/Destination"
+            className="large-button"
+            onClick={() => handleLinkClick("/Destination")}
+            aria-label="Explore Destination"
+          >
             Explore
           </Link>
         </div>

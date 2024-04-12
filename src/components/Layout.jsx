@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 
-export default function Layout() {
+export default function Layout({ activeLink, setActiveLink }) {
   const location = useLocation();
   const [backgroundImage, setBackgroundImage] = useState("");
 
@@ -70,7 +70,7 @@ export default function Layout() {
 
   return (
     <>
-      <Header />
+      <Header activeLink={activeLink} setActiveLink={setActiveLink} />
       <Outlet />
       {backgroundImage && (
         <style>

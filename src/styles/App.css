@@ -466,6 +466,12 @@ ul {
   }
 }
 
+@media (min-width: 1536px) {
+  header > div {
+    width: 60%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

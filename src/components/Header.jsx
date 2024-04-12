@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import spaceLogo from "/assets/shared/logo.svg";
 
-export default function Header() {
+export default function Header({ activeLink, setActiveLink }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
-
-  const [activeLink, setActiveLink] = useState("/");
 
   useEffect(() => {
     const storedActiveLink = sessionStorage.getItem("activeLink");
@@ -42,6 +40,7 @@ export default function Header() {
               to="/"
               className="nav-link"
               onClick={() => handleLinkClick("/")}
+              aria-label="Go to Home"
             >
               <span aria-hidden="true">00</span>Home
             </Link>
@@ -51,6 +50,7 @@ export default function Header() {
               to="/Destination"
               className="nav-link"
               onClick={() => handleLinkClick("/Destination")}
+              aria-label="Explore Destination"
             >
               <span aria-hidden="true">01</span>Destination
             </Link>
@@ -60,6 +60,7 @@ export default function Header() {
               to="/Crew"
               className="nav-link"
               onClick={() => handleLinkClick("/Crew")}
+              aria-label="Meet Our Crew"
             >
               <span aria-hidden="true">02</span>Crew
             </Link>
@@ -69,6 +70,7 @@ export default function Header() {
               to="/Technology"
               className="nav-link"
               onClick={() => handleLinkClick("/Technology")}
+              aria-label="Discover Our Technology"
             >
               <span aria-hidden="true">03</span>Technology
             </Link>

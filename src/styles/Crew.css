@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 3em;
-  padding-inline: 1em;
+  padding-inline: 8vw;
 }
 
 .dot-wrapper {
@@ -50,6 +50,10 @@
   .crew {
     gap: 2vw;
     justify-content: space-between;
+  }
+
+  .crew-container--left {
+    padding-inline: 1em;
   }
 }
 
