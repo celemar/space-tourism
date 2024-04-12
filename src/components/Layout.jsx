@@ -78,8 +78,6 @@ export default function Layout() {
                         body {
                             background-image: url(${backgroundImage});
                             background-size: cover;
-        
-                            /* Add additional body background styles here */
                         }
                     `}
         </style>

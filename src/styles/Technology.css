@@ -147,9 +147,6 @@
     margin-block: 0.3em;
   }
 
-  .technology-container--right picture {
-  }
-
   .technology-img {
     margin-block: 4em;
     height: auto;
@@ -182,12 +179,6 @@
   .technology-container--left .section-title {
     margin-bottom: 3em;
   }
-}
-
-:root {
-  --fs-space: 1.5rem;
-  --fs-space: 2.5rem;
-  --fs-space: 3.5rem;
 }
 
 .technology-container--right {

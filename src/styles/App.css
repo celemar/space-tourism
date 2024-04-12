@@ -280,8 +280,6 @@ ul {
 /**** MEDIA QUERIES ****/
 
 @media (max-width: 768px) {
-  /*** NAV ***/
-
   header {
     padding: 0;
     margin-bottom: 4em;
@@ -297,8 +295,6 @@ ul {
     flex-direction: column;
     height: unset;
     padding-top: 4em;
-    /*     padding-inline: 4em;
-    gap: 8em; */
   }
 
   .home {
